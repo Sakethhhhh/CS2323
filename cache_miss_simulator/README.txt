@@ -1,0 +1,2 @@
+The code has been written in c++. Kindly use c++17/20 to run the code. Parts 1,2,3,4 are supported. The input format is like in the problem statement. Note that the hex value of addresses must be prefixed by a "R: 0x" or "W: 0x" otherwise the program will not work. Furthermore, the value entered should be a hex value. Also do not add empty lines to the textfiles. 
+Thank you.

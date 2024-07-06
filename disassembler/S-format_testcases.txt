@@ -1,0 +1,12 @@
+Input:
+4
+00530023
+00aa9723
+80b62023
+7ed3afa3
+
+Expected Output:
+sb x5, 0(x6)
+sh x10, 14(x21)
+sw x11, -2048(x12)
+sw x13, 2047(x7)

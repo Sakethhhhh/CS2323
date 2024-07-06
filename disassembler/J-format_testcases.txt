@@ -1,0 +1,14 @@
+Input:
+5
+38b2106f
+02c0006f
+0080006f
+00410093
+00000033
+
+Expected Output:
+jal x0,138122
+jal x0, 44
+jal x0, L1
+addi x1,x2,4
+L1: add x0,x0,x0

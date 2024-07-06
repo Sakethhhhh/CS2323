@@ -1,0 +1,151 @@
+add x1, x2, x3
+addi x2, ra, 100
+lw x3, 0(sp)
+ld x4, 0(gp)
+add x5, tp, x4
+lb x6, 0123(x4)
+lh x7, 0(t1)
+sd x8, 0(t2)
+sb x9, 0(sp)
+slli x10, s1, 3
+srli x11, a0, 4
+addi x12, a1, 3
+xori x13, a2, 1
+andi x14, a3, 241
+xor x15, a4, x18
+or x16, a5, x11
+sll x17, a6, x1
+srl x18, a7, x4
+sra x19, s2, x4
+srai x20, s3, 4
+srli x21, s4, 6
+slli x22, s5, 5
+sd x23, 0(s6)
+lbu x24, 0(s7)
+lhu x25, 0(s8)
+lwu x26, 0(s9)
+add x27, s10, x4
+sub x28, s11, x4
+lui x29, 0x1234
+addi x30, t4, 102
+
+Output:
+case 1: Without data forwarding
+add x1, x2, x3
+nop
+nop
+addi x2, ra, 100
+nop
+nop
+lw x3, 0(sp)
+nop
+nop
+ld x4, 0(gp)
+nop
+nop
+add x5, tp, x4
+lb x6, 0123(x4)
+nop
+nop
+lh x7, 0(t1)
+nop
+nop
+sd x8, 0(t2)
+sb x9, 0(sp)
+slli x10, s1, 3
+nop
+nop
+srli x11, a0, 4
+nop
+nop
+addi x12, a1, 3
+nop
+nop
+xori x13, a2, 1
+nop
+nop
+andi x14, a3, 241
+nop
+nop
+xor x15, a4, x18
+nop
+nop
+or x16, a5, x11
+nop
+nop
+sll x17, a6, x1
+nop
+nop
+srl x18, a7, x4
+nop
+nop
+sra x19, s2, x4
+nop
+nop
+srai x20, s3, 4
+nop
+nop
+srli x21, s4, 6
+nop
+nop
+slli x22, s5, 5
+nop
+nop
+sd x23, 0(s6)
+lbu x24, 0(s7)
+nop
+nop
+lhu x25, 0(s8)
+nop
+nop
+lwu x26, 0(s9)
+nop
+nop
+add x27, s10, x4
+nop
+nop
+sub x28, s11, x4
+lui x29, 0x1234
+nop
+nop
+addi x30, t4, 102
+
+case 2: With data forwarding
+add x1, x2, x3
+addi x2, ra, 100
+lw x3, 0(sp)
+nop
+ld x4, 0(gp)
+nop
+add x5, tp, x4
+lb x6, 0123(x4)
+nop
+lh x7, 0(t1)
+nop
+sd x8, 0(t2)
+sb x9, 0(sp)
+slli x10, s1, 3
+srli x11, a0, 4
+addi x12, a1, 3
+xori x13, a2, 1
+andi x14, a3, 241
+xor x15, a4, x18
+or x16, a5, x11
+sll x17, a6, x1
+srl x18, a7, x4
+sra x19, s2, x4
+srai x20, s3, 4
+srli x21, s4, 6
+slli x22, s5, 5
+sd x23, 0(s6)
+lbu x24, 0(s7)
+nop
+lhu x25, 0(s8)
+nop
+lwu x26, 0(s9)
+nop
+add x27, s10, x4
+sub x28, s11, x4
+lui x29, 0x1234
+addi x30, t4, 102
+

@@ -1,0 +1,24 @@
+input:
+10
+003100b3
+40628233
+009443b3
+00c5e533
+00f776b3
+01289833
+015a59b3
+418bdb33
+01bd2cb3
+01eebe33
+
+output:
+add x1, x2, x3
+sub x4, x5, x6
+xor x7, x8, x9
+or x10, x11, x12
+and x13, x14, x15
+sll x16, x17, x18
+srl x19, x20, x21
+sra x22, x23, x24
+slt x25, x26, x27
+sltu x28, x29, x30

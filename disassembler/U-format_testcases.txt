@@ -1,0 +1,10 @@
+Input:
+3
+40293537
+00000eb7
+0ffff137
+
+Expected output:
+lui x10, 0x3240293
+lui x29, 0x0
+lui x2, 0xFFFF

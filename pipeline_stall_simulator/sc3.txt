@@ -1,0 +1,17 @@
+ld x1, 0(x2)
+add x4, x4, x4
+add x3, x3, x3
+sub x4, x1, x2
+
+case 1: Without data forwarding
+ld x1, 0(x2)
+add x4, x4, x4
+add x3, x3, x3
+sub x4, x1, x2
+Total Cycles: 8
+case 2: With data forwarding
+ld x1, 0(x2)
+add x4, x4, x4
+add x3, x3, x3
+sub x4, x1, x2
+Total Cycles: 8
